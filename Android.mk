@@ -7,5 +7,8 @@ LOCAL_SRC_FILES:= iozone.c libbif.c
 
 LOCAL_MODULE:= iozone
 
+# ignore warning that cause compile failed on Android M
+LOCAL_CFLAGS +=-Wno-unused-parameter -Wno-empty-body -Wno-sign-compare -Wno-format -Wno-error=implicit-function-declaration
+
 include $(BUILD_EXECUTABLE)
 
